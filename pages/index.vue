@@ -113,8 +113,10 @@ const prefillData = () => {
 };
 
 const publish = () => {
-  const url = `http://localhost:3000/1?data=${encodeData(data.value)}`;
-  console.log(url);
+  const url = `${window.location.origin}/1?data=${encodeData(data.value)}`;
+  navigator.clipboard.writeText(url).then(() => {
+    alert("Copied to clipboard");
+  });
 };
 
 const isDataObjEmpty = computed(() => {
