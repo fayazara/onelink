@@ -8,12 +8,7 @@
         <p class="mt-1 text-sm text-gray-600">
           {{ description }}
         </p>
-        <p class="mt-1 text-xs text-gray-600">
-          Icon keys can be found in
-          <a class="underline" href="https://icones.js.org/"
-            >https://icones.js.org/</a
-          >.
-        </p>
+        <slot name="helpertext" />
       </div>
     </div>
     <div class="mt-5 md:col-span-2 md:mt-0 relative">

@@ -20,14 +20,14 @@
           v-model:youtube="data.y"
         />
         <app-form-hr />
-        <app-form-links v-model="data.links" />
+        <app-form-links v-model="data.ls" />
       </div>
       <div class="border-t bg-white flex items-center">
         <button
-          @click="prefillData"
+          @click="prefillDemoData"
           class="h-12 flex items-center space-x-2 px-4 border-r text-xs font-medium bg-white text-slate-700"
         >
-          <span> Test Data </span>
+          <span> Add demo data </span>
           <icon name="mdi:code-json" class="h-4 w-4" />
         </button>
         <button
@@ -37,6 +37,14 @@
           <span> Publish </span>
           <icon name="ph:paper-plane-tilt-bold" class="h-4 w-4" />
         </button>
+        <a
+          href="https://github.com/fayazara/onelink"
+          target="_blank"
+          class="h-12 flex items-center space-x-2 px-4 border-r text-xs font-medium bg-white text-slate-700"
+        >
+          <span> Github </span>
+          <icon name="mdi:github" class="h-4 w-4" />
+        </a>
       </div>
     </div>
     <app-form-preview :data="data" />
@@ -65,10 +73,10 @@ const data = ref({
   e: "",
   w: "",
   y: "",
-  links: [],
+  ls: [],
 });
 
-const prefillData = () => {
+const prefillDemoData = () => {
   data.value = {
     n: "John Snow",
     d: "I’m John Snow, the king in the north. I know Nothing.",
@@ -82,31 +90,31 @@ const prefillData = () => {
     w: "+918888888888",
     y: "https://youtube.com/@john_snow",
     l: "https://linkedin.com/john_snow",
-    links: [
+    ls: [
       {
-        label: "My Website",
-        icon: "ph:globe-duotone",
-        url: "https://fayaz.cc",
+        l: "My Website",
+        i: "ph:globe-duotone",
+        u: "https://example.com",
       },
       {
-        label: "Amazon wishlist",
-        icon: "ant-design:amazon-outlined",
-        url: "https://amazon.in",
+        l: "Amazon wishlist",
+        i: "ant-design:amazon-outlined",
+        u: "https://amazon.in",
       },
       {
-        label: "React JS course",
-        icon: "grommet-icons:reactjs",
-        url: "https://reactjs.org/",
+        l: "React JS course",
+        i: "grommet-icons:reactjs",
+        u: "https://reactjs.org/",
       },
       {
-        label: "Donate for our cause",
-        icon: "iconoir:donate",
-        url: "https://who.int",
+        l: "Donate for our cause",
+        i: "iconoir:donate",
+        u: "https://who.int",
       },
       {
-        label: "Download my resume",
-        icon: "ph:file-pdf",
-        url: "https://google.com",
+        l: "Download my resume",
+        i: "ph:file-pdf",
+        u: "https://google.com",
       },
     ],
   };
@@ -115,13 +123,7 @@ const prefillData = () => {
 const publish = () => {
   const url = `${window.location.origin}/1?data=${encodeData(data.value)}`;
   navigator.clipboard.writeText(url).then(() => {
-    alert("Copied to clipboard");
+    alert("Link copied to clipboard");
   });
 };
-
-const isDataObjEmpty = computed(() => {
-  return Object.keys(data.value).every(
-    (key) => data.value[key] === "" || data.value[key].length === 0
-  );
-});
 </script>

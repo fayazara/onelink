@@ -1,5 +1,13 @@
 <template>
   <base-form-section title="Links" description="Add some links here">
+    <template #helpertext>
+      <p class="mt-1 text-xs text-gray-600">
+        Icon keys can be found in
+        <a class="underline" href="https://icones.js.org/"
+          >https://icones.js.org/</a
+        >.
+      </p>
+    </template>
     <draggable
       :list="modelValue"
       item-key="link"
@@ -27,13 +35,13 @@
                   <label
                     for="name"
                     class="block text-sm font-medium text-gray-700"
-                    >Icon Key</label
+                    >Icon Key (optional)</label
                   >
                   <input
                     type="text"
                     name="iconKey"
                     id="iconKey"
-                    v-model="link.icon"
+                    v-model="link.i"
                     class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                   />
                 </div>
@@ -47,7 +55,7 @@
                     type="text"
                     name="label"
                     id="label"
-                    v-model="link.label"
+                    v-model="link.l"
                     class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                   />
                 </div>
@@ -61,14 +69,14 @@
                     type="url"
                     name="url"
                     id="url"
-                    v-model="link.url"
+                    v-model="link.u"
                     class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                   />
                 </div>
               </div>
               <p
                 class="mt-2 text-xs text-center text-slate-400"
-                v-if="!link.label || !link.url"
+                v-if="!link.l || !link.u"
               >
                 Link shown in preview once label and url are added
               </p>
@@ -94,9 +102,9 @@ const props = defineProps({
 });
 const appendLink = () => {
   props.modelValue.push({
-    icon: "",
-    label: "",
-    url: "",
+    i: "",
+    l: "",
+    u: "",
   });
   emit("update:modelValue", props.modelValue);
 };

@@ -19,43 +19,63 @@
       class="flex items-center justify-center flex-wrap"
     >
       <span v-if="acc.f" class="p-1">
-        <icon name="ph:facebook-logo-duotone" class="h-6 w-6" />
+        <a :href="acc.f" target="_blank" rel="noopener | noreferrer">
+          <icon name="ph:facebook-logo-duotone" class="h-6 w-6" />
+        </a>
       </span>
       <span v-if="acc.t" class="p-1">
-        <icon name="ph:twitter-logo-duotone" class="h-6 w-6" />
+        <a :href="acc.t" target="_blank" rel="noopener | noreferrer">
+          <icon name="ph:twitter-logo-duotone" class="h-6 w-6" />
+        </a>
       </span>
       <span v-if="acc.ig" class="p-1">
-        <icon name="ph:instagram-logo-duotone" class="h-6 w-6" />
+        <a :href="acc.ig" target="_blank" rel="noopener | noreferrer">
+          <icon name="ph:instagram-logo-duotone" class="h-6 w-6" />
+        </a>
       </span>
       <span v-if="acc.m" class="p-1">
-        <icon name="ph:envelope-duotone" class="h-6 w-6" />
+        <a :href="acc.m" target="_blank" rel="noopener | noreferrer">
+          <icon name="ph:envelope-duotone" class="h-6 w-6" />
+        </a>
       </span>
       <span v-if="acc.tg" class="p-1">
-        <icon name="ph:telegram-logo-duotone" class="h-6 w-6" />
+        <a :href="acc.tg" target="_blank" rel="noopener | noreferrer">
+          <icon name="ph:telegram-logo-duotone" class="h-6 w-6" />
+        </a>
       </span>
       <span v-if="acc.w" class="p-1">
-        <icon name="ph:whatsapp-logo-duotone" class="h-6 w-6" />
+        <a :href="`https://wa.me/${acc.w}`" target="_blank" rel="noopener | noreferrer">
+          <icon name="ph:whatsapp-logo-duotone" class="h-6 w-6" />
+        </a>
       </span>
       <span v-if="acc.y" class="p-1">
-        <icon name="ph:youtube-logo-duotone" class="h-6 w-6" />
+        <a :href="acc.y" target="_blank" rel="noopener | noreferrer">
+          <icon name="ph:youtube-logo-duotone" class="h-6 w-6" />
+        </a>
       </span>
       <span v-if="acc.e" class="p-1">
-        <icon name="ph:envelope-duotone" class="h-6 w-6" />
+        <a :href="`mailto:${acc.e}`" target="_blank" rel="noopener | noreferrer">
+          <icon name="ph:envelope-duotone" class="h-6 w-6" />
+        </a>
       </span>
       <span v-if="acc.gh" class="p-1">
-        <icon name="ph:github-logo-duotone" class="h-6 w-6" />
+        <a :href="acc.gh" target="_blank" rel="noopener | noreferrer">
+          <icon name="ph:github-logo-duotone" class="h-6 w-6" />
+        </a>
       </span>
       <span v-if="acc.l" class="p-1">
-        <icon name="ph:linkedin-logo-duotone" class="h-6 w-6" />
+        <a :href="acc.l" target="_blank" rel="noopener | noreferrer">
+          <icon name="ph:linkedin-logo-duotone" class="h-6 w-6" />
+        </a>
       </span>
     </div>
     <ul class="space-y-2">
       <ExternalLink
-        v-for="(link, i) in acc.links"
-        :label="link.label"
-        :icon="link.icon"
-        :url="link.url"
-        :key="i"
+        v-for="(link, id) in acc.ls"
+        :label="link.l"
+        :icon="link.i"
+        :url="link.u"
+        :key="id"
       />
     </ul>
   </main>
