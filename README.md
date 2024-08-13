@@ -1,6 +1,4 @@
-[<img src="https://github.com/user-attachments/assets/60e89805-26fd-4074-8ced-447fb148c7e6">](http://supersaas.dev?ref=github)
-
-[https://supersaas.dev](https://supersaas.dev) Makes you build and ship apps faster than ever.
+[<img src="https://essentials.supersaas.dev/supersaas-banner.png">](http://supersaas.dev?ref=github)
 
 # Onelink
 
