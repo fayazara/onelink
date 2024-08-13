@@ -1,4 +1,4 @@
-[<img src="https://essentials.supersaas.dev/supersaas-banner.png">](http://supersaas.dev?ref=github)
+[<img src="https://essentials.supersaas.dev/supersaas-banner.png">](http://supersaas.dev?ref=github-onelink)
 
 # Onelink
 
