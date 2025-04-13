@@ -1,10 +1,5 @@
 <template>
-  <svg
-    class="animate-spin"
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 24 24"
-  >
+  <svg class="animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
     <circle
       class="opacity-25"
       cx="12"

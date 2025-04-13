@@ -1,45 +1,34 @@
----
-Build and Ship Nuxt 3 fullstack starter apps with Auth, DB, Payments, Email & File storage 
-
-Try [Supersaas today](https://supersaas.dev)
----
-
-
-[<img src="https://essentials.supersaas.dev/supersaas-banner.png">](https://supersaas.dev?ref=github-onelink)
-
 # Onelink
 
-Onelink is an experimental link-in-bio tool, where the data lives in the URL. 
-
-
+Onelink is an link-in-bio tool, where the data lives in the URL.
 
 ![Screenshot2023-01-30 at 00 40 04@2x](https://user-images.githubusercontent.com/15716057/215350057-5fbf81f5-5f33-4cbe-98ba-0ced8b3c09c8.jpg)
 
 > **Note**
 > Since the URL can become very long, it's better to use a link shortener like https://dub.co
 
-Here's a demo page
-https://onelink-nu.vercel.app/1?data=eyJuIjoiSm9obiBTbm93IiwiZCI6IknigJltIEpvaG4gU25vdywgdGhlIGtpbmcgaW4gdGhlIG5vcnRoLiBJIGtub3cgTm90aGluZy4iLCJpIjoiaHR0cHM6Ly9pLmluc2lkZXIuY29tLzU2NzQzZmFkNzJmMmMxMmEwMDhiNmNjMCIsImYiOiJodHRwczovL3d3dy5mYWNlYm9vay5jb20vam9obl9zbm93IiwidCI6Imh0dHBzOi8vdHdpdHRlci5jb20vam9obl9zbm93IiwiaWciOiJodHRwczovL3d3dy5pbnN0YWdyYW0uY29tL2pvaG5fc25vdyIsImUiOiJtYWlsQGpvaG5fc25vdy5jYyIsImdoIjoiaHR0cHM6Ly9naXRodWIuY29tL2pvaG5fc25vdyIsInRnIjoiaHR0cHM6Ly90Lm1lL2pvaG5fc25vdyIsInciOiIrOTE4ODg4ODg4ODg4IiwieSI6Imh0dHBzOi8veW91dHViZS5jb20vQGpvaG5fc25vdyIsImwiOiJodHRwczovL2xpbmtlZGluLmNvbS9qb2huX3Nub3ciLCJscyI6W3sibCI6Ik15IFdlYnNpdGUiLCJpIjoicGg6Z2xvYmUtZHVvdG9uZSIsInUiOiJodHRwczovL2V4YW1wbGUuY29tIn0seyJsIjoiQW1hem9uIHdpc2hsaXN0IiwiaSI6ImFudC1kZXNpZ246YW1hem9uLW91dGxpbmVkIiwidSI6Imh0dHBzOi8vYW1hem9uLmluIn0seyJsIjoiUmVhY3QgSlMgY291cnNlIiwiaSI6Imdyb21tZXQtaWNvbnM6cmVhY3RqcyIsInUiOiJodHRwczovL3JlYWN0anMub3JnLyJ9LHsibCI6IkRvbmF0ZSBmb3Igb3VyIGNhdXNlIiwiaSI6Imljb25vaXI6ZG9uYXRlIiwidSI6Imh0dHBzOi8vd2hvLmludCJ9LHsibCI6IkRvd25sb2FkIG15IHJlc3VtZSIsImkiOiJwaDpmaWxlLXBkZiIsInUiOiJodHRwczovL2dvb2dsZS5jb20ifV19
+Here's a demo page https://onelink-nu.vercel.app/user?data=eyJuYW1lIjoiSm9obiBTbm93IiwiZGVzYyI6IkknbSBKb2huIFNub3csIHRoZSBraW5nIGluIHRoZSBub3J0aC4gSSBrbm93IE5vdGhpbmcuIiwiaW1hZ2UiOiJodHRwczovL3BsYWNlaG9sZC5jby8yMDA_dGV4dD1KIiwiZmFjZWJvb2siOiJodHRwczovL3d3dy5mYWNlYm9vay5jb20vam9obl9zbm93IiwidHdpdHRlciI6Imh0dHBzOi8vdHdpdHRlci5jb20vam9obl9zbm93IiwiaW5zdGFncmFtIjoiaHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9qb2huX3Nub3ciLCJlbWFpbCI6Im1haWxAam9obl9zbm93LmNjIiwiZ2l0aHViIjoiaHR0cHM6Ly9naXRodWIuY29tL2pvaG5fc25vdyIsInlvdXR1YmUiOiJodHRwczovL3lvdXR1YmUuY29tL0Bqb2huX3Nub3ciLCJibHVlc2t5IjoiaHR0cHM6Ly9ic2t5LmFwcC9wcm9maWxlL2pvaG5zbm93LmJza3kuc29jaWFsIiwiZGV2dG8iOiJodHRwczovL2Rldi50by9qb2huc25vdyIsInRlbGVncmFtIjoiaHR0cHM6Ly90Lm1lL2pvaG5fc25vdyIsIndoYXRzYXBwIjoiKzkxODg4ODg4ODg4OCIsImxpbmtlZGluIjoiaHR0cHM6Ly9saW5rZWRpbi5jb20vam9obl9zbm93IiwibG5rcyI6W3siaWQiOiI0bDEwdDZhYyIsImxhYmVsIjoiUG9ydGZvbGlvIiwiaWNvbiI6Im1kaTpnbG9iZSIsInVybCI6Imh0dHBzOi8vam9obnNub3cuY29tIn0seyJpZCI6IjRpYXZ0ZTEzIiwibGFiZWwiOiJSZXN1bWUiLCJpY29uIjoibWRpOmZpbGUtZG9jdW1lbnQiLCJ1cmwiOiJodHRwczovL2pvaG5zbm93LmNvbS9yZXN1bWUifV19
 
 The data is converted to a base 64 string which we onelink uses as a query parameter. I have tried to reduce the json keys to be as small as possible
 
-Roadmap.
-1. Templates - make different templates, the `/1` after the host is basically a template here.
-2. Refactor code - a lot of repeated boilerplate code is added here - refactor it properly.
+## What Next
+
+1. Templates - make different templates, the `/user` after the host is basically a template here.
+2. Load from link - user could load and edit previously published data by using url they got on-publish.
 
 ## Setup locally
 
 Make sure to install the dependencies:
 
 ```bash
-# yarn
-yarn install
-
 # npm
 npm install
 
+# yarn
+yarn install
+
 # pnpm
-pnpm install --shamefully-hoist
+pnpm install
 ```
 
 ## Development Server
@@ -47,7 +36,14 @@ pnpm install --shamefully-hoist
 Start the development server on http://localhost:3000
 
 ```bash
-npm run dev
+# npm
+npm start
+
+# yarn
+yarn start
+
+# pnpm
+pnpm start
 ```
 
 ## Production

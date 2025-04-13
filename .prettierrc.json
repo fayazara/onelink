@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/prettierrc",
+  "semi": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "printWidth": 100,
+  "plugins": [
+    "prettier-plugin-organize-attributes",
+    "prettier-plugin-css-order",
+    "prettier-plugin-tailwindcss"
+  ],
+  "attributeGroups": ["^class$", "^(id|name)$", "$DEFAULT", "^data-", "^aria-"],
+  "tailwindStylesheet": "./app/main.css",
+  "tailwindPreserveWhitespace": true,
+  "tailwindPreserveDuplicates": true
+}

@@ -1,0 +1,40 @@
+@import 'tailwindcss';
+@plugin "@tailwindcss/forms";
+
+@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant hover (&:hover);
+
+@theme {
+  --font-sans: 'Open Sans', Roboto, 'Segoe UI', 'sans-serif';
+  --font-mono: Monaco, Consolas, Courier New, monospace;
+}
+@layer base {
+  *,
+  *::before,
+  *::after {
+    @apply border-gray-400 transition duration-150 ease-initial;
+    scrollbar-width: thin; /* firefox scollbar */
+  }
+  body {
+    @apply bg-gray-100 font-sans text-zinc-900;
+    max-width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-style: normal;
+    font-family: var(--font-sans);
+    font-optical-sizing: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: gray-scale;
+    font-variation-settings: 'wdth' 100;
+  }
+  button {
+    cursor: pointer;
+  }
+}
+@utility inp {
+  @apply block w-full rounded-md border-gray-300 text-sm shadow-sm outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-base;
+}
+@utility lab {
+  @apply block text-sm font-medium text-zinc-700;
+}

@@ -1,25 +1,36 @@
 {
-  "private": true,
+  "name": "nuxt-app",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "devDependencies": {
-    "@nuxtjs/color-mode": "^3.2.0",
-    "@nuxtjs/tailwindcss": "^6.3.0",
-    "@tailwindcss/forms": "^0.5.3",
-    "@vueuse/core": "^9.12.0",
-    "@vueuse/nuxt": "^9.12.0",
-    "nuxt": "^3.1.1",
-    "nuxt-icon": "^0.2.10"
+    "postinstall": "nuxt prepare",
+    "format": "prettier -w **/*.ts **/*.vue **/*.css",
+    "start": "nr format && cls && nr dev"
   },
   "dependencies": {
-    "@headlessui/vue": "^1.7.8",
-    "floating-vue": "^2.0.0-beta.20",
-    "js-base64": "^3.7.4",
-    "vuedraggable": "^4.1.0"
-  }
+    "@vueuse/core": "^13.1.0",
+    "js-base64": "^3.7.7",
+    "nuxt": "^3.16.2",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@antfu/ni": "^24.3.0",
+    "@iconify-json/mdi": "^1.2.3",
+    "@iconify-json/simple-icons": "^1.2.31",
+    "@nuxt/icon": "^1.12.0",
+    "@nuxtjs/fontaine": "0.5.0",
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/vite": "latest",
+    "@vueuse/nuxt": "13.1.0",
+    "prettier": "^3.5.3",
+    "prettier-plugin-css-order": "^2.1.2",
+    "prettier-plugin-organize-attributes": "^1.0.0",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "tailwindcss": "latest"
+  },
+  "license": "MIT",
+  "packageManager": "yarn@1.22.22"
 }
