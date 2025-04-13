@@ -3,7 +3,7 @@
     <section class="text-center" aria-labelledby="bio-title">
       <h2 class="sr-only" id="bio-title">Bio</h2>
       <div
-        class="mx-auto h-20 w-20 overflow-hidden rounded-full ring ring-gray-200 transition focus-within:ring-2 focus-within:ring-blue-500 hover:scale-105 focus:outline-none"
+        class="mx-auto h-20 w-20 overflow-hidden rounded-full ring ring-gray-200 transition focus-within:ring-2 focus-within:ring-indigo-500 hover:scale-105 focus:outline-none"
         v-if="acc.image"
         tabindex="0"
         aria-label="User avatar"
@@ -25,7 +25,7 @@
       <div class="flex flex-wrap items-center justify-center gap-2">
         <template v-for="(url, key) in links" :key="key">
           <a
-            class="group rounded-full p-2 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+            class="group rounded-full p-2 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
             v-if="url"
             :href="url"
             target="_blank"

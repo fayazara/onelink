@@ -110,7 +110,7 @@
             </div>
           </div>
           <button
-            class="mt-8 block w-full rounded-lg border-2 border-gray-300 py-2 text-zinc-600 transition hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            class="mt-8 block w-full rounded-lg border-2 border-gray-300 py-2 text-zinc-600 transition hover:bg-gray-100 focus:ring-2 focus:ring-indigo-500 focus:outline-none"
             type="button"
             @click="addLink"
             aria-label="Add new link"

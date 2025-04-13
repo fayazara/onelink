@@ -33,7 +33,7 @@
   }
 }
 @utility inp {
-  @apply block w-full rounded-md border-gray-300 text-sm shadow-sm outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-base;
+  @apply block w-full rounded-md border-gray-300 text-sm shadow-sm outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 sm:text-base;
 }
 @utility lab {
   @apply block text-sm font-medium text-zinc-700;
